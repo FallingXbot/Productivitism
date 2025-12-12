@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="using:Productivitism.View"
+             xmlns:vm="clr-namespace:Productivitism.ViewModel"
+             x:DataType="view:MainViewModel"
+             mc:Ignorable="d"
+             d:DesignWidth="1100"
+             d:DesignHeight="464"
+             x:Class="Productivitism.Shop">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label ZIndex="1" Grid.ColumnSpan="4" Classes="h1" Content="Shop Area"/>
+
+
+        <StackPanel>
+            <TextBlock Margin="0 50 0 0" Classes="Text" Text="Buy 10min"/>
+            <TextBlock Classes="Text" Text="For 5P"/>
+            <Button Command="{Binding Purchase1Command}" Classes="PurchaseButton" HorizontalAlignment="Center" Margin="0 20 0 0" Content="Purchase"/>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Margin="0 50 0 0" Classes="Text" Text="Buy 30min"/>
+            <TextBlock Classes="Text" Text="For 25P"/>
+            <Button Command="{Binding Purchase2Command}" Classes="PurchaseButton" HorizontalAlignment="Center" Margin="0 20 0 0" Content="Purchase"/>
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Column="2">
+            <TextBlock Margin="0 50 0 0" Classes="Text" Text="Buy 1h"/>
+            <TextBlock Classes="Text" Text="For 40P"/>
+            <Button Command="{Binding Purchase3Command}" Classes="PurchaseButton" HorizontalAlignment="Center" Margin="0 20 0 0" Content="Purchase"/>
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Column="3">
+            <TextBlock Margin="0 50 0 0" Classes="Text" Text="Buy 2h"/>
+            <TextBlock Classes="Text" Text="For 70P"/>
+            <Button Command="{Binding Purchase4Command}" Classes="PurchaseButton" HorizontalAlignment="Center" Margin="0 20 0 0" Content="Purchase"/>
+
+        </StackPanel>
+
+
+    </Grid>
+
+</UserControl>

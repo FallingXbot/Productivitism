@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="using:Productivitism.View"
+             xmlns:vm="clr-namespace:Productivitism.ViewModel"
+             x:DataType="view:MainViewModel"
+             mc:Ignorable="d" d:DesignWidth="1100"
+             d:DesignHeight="464"
+             x:Class="Productivitism.BreakTimer">
+    <StackPanel>
+
+        <Label Classes="h1" Content="Break Time!"/>
+        <TextBlock Classes="Text" Text="You Can Do Everything That You Want"/>
+        <TextBlock Classes="Text" Text="During The Break Timer!"/>
+
+        <Label Margin="0 30 0 0" Classes="h2" Content="Time Remaining:"/>
+
+        <TextBlock Classes="Text" FontSize="40" Text="{Binding TimeForABreak}"/>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding StartBreakTimerCommand}" Background="Green" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="200" Margin="350 60 0 0" HorizontalAlignment="Center" Content="Start Break Time"/>
+            <Button Command="{Binding StopBreakTimerCommand}" Background="IndianRed" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="200" Margin="0 60 0 0" HorizontalAlignment="Center" Content="Stop Break Time"/>
+
+        </StackPanel>
+
+    </StackPanel>
+
+</UserControl>

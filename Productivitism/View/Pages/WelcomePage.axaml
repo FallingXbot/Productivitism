@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="1100"
+             d:DesignHeight="464"
+             x:Class="Productivitism.WelcomePage">
+    <StackPanel Orientation="Vertical">
+        <Label Classes="h1" Content="Welcome To Productivism!"/>
+
+        <TextBlock Margin="0 20 0 0" Classes="Text" Text="This App was made to improve my time managment"/>
+
+        <TextBlock Margin="0 10 0 0" Classes="Text" Text="You can work during sessions, earn 'Time Coins'"/>
+
+        <TextBlock Margin="0 10 0 0" Classes="Text" Text="While 'Break Time' timer is running, you can do anything"/>
+
+        <TextBlock Margin="0 10 0 0" Classes="Text" Text="There is also 'Statistics' tab where you can see"/>
+
+        <TextBlock Margin="0 10 0 0" Classes="Text" Text="Your whole time spended in sessions or breaks"/>
+
+        <TextBlock Margin="0 10 0 0" Classes="Text" Text="You can contact me with discord"/>
+
+        <Button HorizontalContentAlignment="Center" Width="200" Margin="0 20 0 0" HorizontalAlignment="Center" Classes="DiscordButton" Content="Discord"/>
+
+
+
+    </StackPanel>
+
+</UserControl>

@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="using:Productivitism.View"
+             xmlns:vm="clr-namespace:Productivitism.ViewModel"
+             mc:Ignorable="d"
+             x:DataType="view:MainViewModel"
+             d:DesignWidth="1100"
+             d:DesignHeight="464"
+             x:Class="Productivitism.StartSession">
+
+    <StackPanel>
+        <Label Classes="h1" Content="Start A Session"/>
+        <Label Classes="h2" Content="Pick A Time"/>
+        <TimePicker SelectedTime="{Binding SessionTime}" Margin="0 10 0 0" HorizontalAlignment="Center" ClockIdentifier="24HourClock" MinuteIncrement="1"/>
+        <Label Margin="0 40 0 0" Classes="h2" Content="Select Your Motivation"/>
+        <TextBlock Classes="Text" Text="Choose Your Motivation Based On Your Mood"/>
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+            <RadioButton IsChecked="{Binding GoodMood}" FontSize="23" GroupName="Motivation" Content="Good"/>
+            <RadioButton IsChecked="{Binding MidMood}" FontSize="23" Margin="100 0 0 0" GroupName="Motivation" Content="Mid"/>
+            <RadioButton IsChecked="{Binding BadMood}" FontSize="23" Margin="100 0 0 0" GroupName="Motivation" Content="Bad"/>
+        </StackPanel>
+        <Button Command="{Binding StartTimerCommand}" Background="Lime" HorizontalContentAlignment="Center" FontSize="30" HorizontalAlignment="Center" Width="300" Margin="0 50 0 0" Content="Start"/>
+
+    </StackPanel>
+
+
+</UserControl>

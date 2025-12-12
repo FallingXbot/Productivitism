@@ -1,0 +1,23 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Productivitism.App"
+             RequestedThemeVariant="Default">
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="Styles/AppDefaultStyles.axaml"></StyleInclude>
+    </Application.Styles>
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="BreakButton">#0f47f7</SolidColorBrush>
+        <SolidColorBrush x:Key="ShopButton">#c317d7</SolidColorBrush>
+        <SolidColorBrush x:Key="SettingsButton">#c2ffd3</SolidColorBrush>
+        <SolidColorBrush x:Key="StatisticsButton">#ffdec2</SolidColorBrush>
+        <SolidColorBrush x:Key="pointeroverButton">#f1f70f</SolidColorBrush>
+        <SolidColorBrush x:Key="pointeroverForegroundButton">#000000</SolidColorBrush>
+        <SolidColorBrush x:Key="TopTextColor">#001700</SolidColorBrush>
+    </Application.Resources>
+
+
+</Application>

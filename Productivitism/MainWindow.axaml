@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="using:Productivitism.View"
+        xmlns:vm="clr-namespace:Productivitism.ViewModel"
+        mc:Ignorable="d"
+        x:DataType="view:MainViewModel"
+        d:DesignWidth="1100"
+        d:DesignHeight="650"
+        Width="1100"
+        Height="650"
+        x:Class="Productivitism.MainWindow"
+        Title="Productivitism">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Orientation="Horizontal" Background="#c4c2ff">
+            <Button Command="{Binding OpenSettingCommand}" Margin="40 0 0 0" Content="Settings" Background="{DynamicResource SettingsButton}" Classes="UpperButton"/>
+            <Button Command="{Binding OpenStatisticsCommand}" Margin="40 0 0 0" Content="Statistics" Background="{DynamicResource StatisticsButton}" Classes="UpperButton"/>
+
+            <Label Margin="40 0 0 0" Classes="Top" Content="Time For A Break:"/>
+            <Label Classes="Top" Content="{Binding TimeForABreak}"/>
+
+            <Label Margin="30 0 0 0" Classes="Top" Content="Productivity Coins:"/>
+            <Label Classes="Top" Content="{Binding Tcoins}"/>
+
+        </StackPanel>
+
+        <ContentControl Grid.Row="1" Content="{Binding CurrentPage}"></ContentControl>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Background="#c4c2ff">
+
+            <Button Command="{Binding OpenBreakTimerCommand}" HorizontalContentAlignment="Center" Width="200" Background="{DynamicResource BreakButton}" Margin="40 0 0 0" Content="Start A Break" Classes="BottomButton"/>
+
+            <Button Command="{Binding OpenStartSessionCommand}" HorizontalContentAlignment="Center" Width="300" Margin="165 0 0 0" Content="Start A Session" Classes="BottomButton"/>
+
+            <Button Command="{Binding OpenShopCommand}" HorizontalContentAlignment="Center" Width="200" Background="{DynamicResource ShopButton}" Margin="165 0 0 0" Content="Shop" Classes="BottomButton"/>
+
+        </StackPanel>
+
+    </Grid>
+
+
+</Window>
